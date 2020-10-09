@@ -36,14 +36,14 @@ class App extends Component {
           <hr />
           <Switch>
               <Route exact path='/portfolio' component={Home} />
-              <Route path='/contact' component={Contact} />
-              <Route path='/about' component={About} />
-              <Route path='/shinyClimate' component={ShinyClimate} />
-              <Route path='/carAccident' component={CarAccident} />
-              <Route path='/resources' component={Resources} />
-              <Route path='/healthyLiving' component={HealthyLiving} />
-              <Route path='/teethWhitening' component={TeethWhitening} />
-              <Route path='/trade' component={Trade} />
+              <Route path='/portfolio/contact' component={Contact} />
+              <Route path='/portfolio/about' component={About} />
+              <Route path='/portfolio/shinyClimate' component={ShinyClimate} />
+              <Route path='/portfolio/carAccident' component={CarAccident} />
+              <Route path='/portfolio/resources' component={Resources} />
+              <Route path='/portfolio/healthyLiving' component={HealthyLiving} />
+              <Route path='/portfolio/teethWhitening' component={TeethWhitening} />
+              <Route path='/portfolio/trade' component={Trade} />
           </Switch>
         </div>
       </Router>

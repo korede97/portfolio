@@ -11,7 +11,7 @@ class About extends Component {
   render() {
     return (
       <div className = 'container'>
-          <img src="about.jpg" alt="Paris" className="center"
+          <img src="about.jpg" alt="aboutimage" className="center"
             style = {image_style}/>
             <br />
             <audio controls controlsList="nodownload" className ="center" style = {{width: '30%'}}>

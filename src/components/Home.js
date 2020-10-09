@@ -36,7 +36,7 @@ class Home extends Component {
                 <div id = 'container_1'>
                   <div className = 'zoom'>
                     <img src="derozan.jpg" alt='shinyclimate' style={{width:"100%"}} />
-                    <div className="text-block">Basketball Analytics Project - Coming Soon!!! <br/> Analysis of Toronto Raptors trading Demar Derozan</div>
+                    <div className="text-block"> Analysis of Toronto Raptors trading Demar Derozan</div>
                   </div>
                 </div>
               </Link>
@@ -97,9 +97,7 @@ class Home extends Component {
                 <div className = 'zoom'>
                     <img src="healthy.jpg" alt='shinyclimate' style={{width:"100%"}} />
                   <div className="text-block">
-                    Healthy Lifestyle Project - Coming Soon!!!
-                    <br/>
-                    Analysing the components of a healthy lifestyle for an individual
+                  Analysing the components of a healthy lifestyle for an individual
                   </div>
                 </div>
               </div>
@@ -122,9 +120,7 @@ class Home extends Component {
                   <div className = 'zoom'>
                       <img src="whitening.jpg" alt='shinyclimate' style={{width:"100%"}} />
                     <div className="text-block">
-                      Teeth Whitening Project - Coming Soon!!!
-                      <br/>
-                      Determining which teeth "whitening" products remove the most surface stains
+                    Determining which teeth "whitening" products remove the most surface stains
                     </div>
                   </div>
                 </div>

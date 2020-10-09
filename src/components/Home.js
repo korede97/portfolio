@@ -15,7 +15,7 @@ class Home extends Component {
             <Link to="/shinyClimate">
               <div id = 'container_1'>
                 <div className = 'zoom'>
-                      <img src="images/climate.jpg" alt='shinyclimate' style={{width:"100%"}} />
+                      <img src="climate.jpg" alt='shinyclimate' style={{width:"100%"}} />
                   <div className="text-block"><h4>Showcasing evidence of climate change</h4> </div>
                 </div>
               </div>
@@ -25,7 +25,7 @@ class Home extends Component {
               <Link to="/carAccident">
                 <div id = 'container_1'>
                   <div className = 'zoom'>
-                    <img src="images/accident.jpg" alt='shinyclimate' style={{width:"100%"}} />
+                    <img src="accident.jpg" alt='shinyclimate' style={{width:"100%"}} />
                     <div className="text-block"><h4>Predicting car accient severity</h4></div>
                   </div>
                 </div>
@@ -35,7 +35,7 @@ class Home extends Component {
               <div id = 'container_1'>
               <div className = 'zoom'>
                   <Link to="/trade">
-                    <img src="images/derozan.jpg" alt='shinyclimate' style={{width:"100%"}} />
+                    <img src="derozan.jpg" alt='shinyclimate' style={{width:"100%"}} />
                   </Link>
                   <div className="text-block"><h5>Basketball Analytics Project - Coming Soon!!!</h5> Analysis of Toronto Raptors trading Demar Derozan</div>
                   </div>
@@ -70,7 +70,7 @@ class Home extends Component {
               <div id = 'container_1'>
               {/*<div className = 'zoom'>
                   <Link to="/shinyclimate">*/}
-                    <img src="images/special.jpg" alt='shinyclimate' style={{width:"100%"}} />
+                    <img src="special.jpg" alt='shinyclimate' style={{width:"100%"}} />
                     {/*</Link>*/}
                   <div className="text-block"><h4>Special Education Project - Coming Soon!!!</h4></div>
                   {/*</div>*/}
@@ -79,7 +79,7 @@ class Home extends Component {
               <div id = 'container_1'>
                 {/*<div className = 'zoom'>
                   <Link to="/shinyclimate">*/}
-                    <img src="images/lyrics.jpg" alt='shinyclimate' style={{width:"100%"}} />
+                    <img src="lyrics.jpg" alt='shinyclimate' style={{width:"100%"}} />
                     {/*</Link>*/}
                   <div className="text-block"><h4>Lyrical Sentiment Analysis  - Coming Soon!!!</h4></div>
                 {/*</div>*/}
@@ -95,7 +95,7 @@ class Home extends Component {
               <div id = 'container_1'>
                 <div className = 'zoom'>
                   <Link to="/healthyLiving">
-                      <img src="images/healthy.jpg" alt='shinyclimate' style={{width:"100%"}} />
+                      <img src="healthy.jpg" alt='shinyclimate' style={{width:"100%"}} />
                       </Link>
                   <div className="text-block">
                     <h5>Healthy Lifestyle Project - Coming Soon!!!</h5>
@@ -119,7 +119,7 @@ class Home extends Component {
               <div id = 'container_1'>
                 <div className = 'zoom'>
                   <Link to="/teethWhitening">
-                    <img src="images/whitening.jpg" alt='shinyclimate' style={{width:"100%"}} />
+                    <img src="whitening.jpg" alt='shinyclimate' style={{width:"100%"}} />
                     </Link>
                   <div className="text-block">
                     <h5>Teeth Whitening Project - Coming Soon!!!</h5>
@@ -133,7 +133,7 @@ class Home extends Component {
               <div id = 'container_1'>
                 <div className = 'zoom'>
                   {/*<Link to="/shinyclimate">*/}
-                    <img src="images/spaceJam_inception_wc.jpg" alt='shinyclimate' style={{width:"100%"} } />
+                    <img src="wc.jpg" alt='shinyclimate' style={{width:"100%"} } />
                     {/*</Link>*/}
                   <div className="text-block"><h4>Movie Subtitle Word Cloud </h4>Space Jam (1996) and Inception (2010)</div>
                   </div>
@@ -144,7 +144,7 @@ class Home extends Component {
               <div id = 'container_1'>
               {/*<div className = 'zoom'>
                   <Link to="/shinyclimate">*/}
-                    <img src="images/business.jpg" alt='shinyclimate' style={{width:"100%"}} />
+                    <img src="business.jpg" alt='shinyclimate' style={{width:"100%"}} />
                   {/*</Link>*/}
                   <div className="text-block"><h4>Business Intelligence Project - Coming Soon!!!</h4></div>
                   {/*</div>*/}
@@ -158,7 +158,7 @@ class Home extends Component {
               <div id = 'container_1'>
               {/*<div className = 'zoom'>
                   <Link to="/shinyclimate">*/}
-                    <img src="images/design.jpg" alt='shinyclimate' style={{width:"100%"}} />
+                    <img src="design.jpg" alt='shinyclimate' style={{width:"100%"}} />
                     {/*</Link>*/}
                   <div className="text-block"> <h4>Interior Design Project - Coming Soon!!!</h4></div>
                   {/*</div>*/}

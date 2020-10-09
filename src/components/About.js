@@ -11,11 +11,11 @@ class About extends Component {
   render() {
     return (
       <div className = 'container'>
-          <img src="/images/about.jpg" alt="Paris" className="center"
+          <img src="about.jpg" alt="Paris" className="center"
             style = {image_style}/>
             <br />
             <audio controls controlsList="nodownload" className ="center" style = {{width: '30%'}}>
-              <source src="/sounds/about.ogg" type="audio/ogg" />
+              <source src="about.ogg" type="audio/ogg" />
               Your browser does not support the audio element.
             </audio>
             <br />

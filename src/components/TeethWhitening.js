@@ -10,7 +10,7 @@ class TeethWhitening extends Component {
   render(){
     return (
       <div className = 'container'>
-          <img src="/images/climate.jpg" alt="Paris" className="center"
+          <img src="climate.jpg" alt="Paris" className="center"
             style = {image_style}/>
             <hr/>
             <br />

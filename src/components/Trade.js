@@ -7,7 +7,7 @@ class Trade extends Component {
   render(){
     return (
       <div className = 'container'>
-          <img src="/images/derozan.jpg" alt="Paris" className="center"
+          <img src="derozan.jpg" alt="Paris" className="center"
             style = {image_style}/>
             <hr/>
             <br />

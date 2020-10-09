@@ -7,7 +7,7 @@ class CarAccident extends Component {
   render(){
     return (
       <div className = 'container'>
-          <img src="accident.jpg" alt="Paris" className="center"
+          <img src="accident.jpg" alt="accident" className="center"
             style = {image_style}/>
             <hr/>
             <br />

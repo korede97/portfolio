@@ -10,7 +10,7 @@ class HealthyLiving extends Component {
   render(){
     return (
       <div className = 'container'>
-          <img src="climate.jpg" alt="Paris" className="center"
+          <img src="healthy.jpg" alt="healthylifestyle" className="center"
             style = {image_style}/>
             <hr/>
             <br />

@@ -32,14 +32,15 @@ class Home extends Component {
               </Link>
 
 
-              <div id = 'container_1'>
-              <div className = 'zoom'>
-                  <Link to="/trade">
+              <Link to="/trade">
+                <div id = 'container_1'>
+                  <div className = 'zoom'>
                     <img src="derozan.jpg" alt='shinyclimate' style={{width:"100%"}} />
-                  </Link>
-                  <div className="text-block">Basketball Analytics Project - Coming Soon!!! <br/> Analysis of Toronto Raptors trading Demar Derozan</div>
+                    <div className="text-block">Basketball Analytics Project - Coming Soon!!! <br/> Analysis of Toronto Raptors trading Demar Derozan</div>
                   </div>
-              </div>
+                </div>
+              </Link>
+
 
               <div id="gr_updates_widget">
                 <iframe id="the_iframe" title = "GoodReads Widget" src="https://goodreads.com/widgets/user_update_widget?height=400&num_updates=5&user=58960239&width=400" width={'97%'} height={300} frameBorder={0} />
@@ -91,12 +92,10 @@ class Home extends Component {
             <div className='column'>
 
 
-
+            <Link to="/healthyLiving">
               <div id = 'container_1'>
                 <div className = 'zoom'>
-                  <Link to="/healthyLiving">
-                      <img src="healthy.jpg" alt='shinyclimate' style={{width:"100%"}} />
-                      </Link>
+                    <img src="healthy.jpg" alt='shinyclimate' style={{width:"100%"}} />
                   <div className="text-block">
                     Healthy Lifestyle Project - Coming Soon!!!
                     <br/>
@@ -104,6 +103,8 @@ class Home extends Component {
                   </div>
                 </div>
               </div>
+            </Link>
+
 
               <div id = 'container_1'>
                   <TwitterTimelineEmbed
@@ -116,19 +117,19 @@ class Home extends Component {
                   />
               </div>
 
-
-              <div id = 'container_1'>
-                <div className = 'zoom'>
-                  <Link to="/teethWhitening">
-                    <img src="whitening.jpg" alt='shinyclimate' style={{width:"100%"}} />
-                    </Link>
-                  <div className="text-block">
-                    Teeth Whitening Project - Coming Soon!!!
-                    <br/>
-                    Determining which teeth "whitening" products remove the most surface stains
+              <Link to="/teethWhitening">
+                <div id = 'container_1'>
+                  <div className = 'zoom'>
+                      <img src="whitening.jpg" alt='shinyclimate' style={{width:"100%"}} />
+                    <div className="text-block">
+                      Teeth Whitening Project - Coming Soon!!!
+                      <br/>
+                      Determining which teeth "whitening" products remove the most surface stains
+                    </div>
                   </div>
                 </div>
-              </div>
+              </Link>
+
 
 
               <a href = 'https://github.com/korede97/MovieSubtitle_WordCloud/blob/main/MovieSubtitle_WordCloud.ipynb' target = '_blank' rel = 'noopener noreferrer'>

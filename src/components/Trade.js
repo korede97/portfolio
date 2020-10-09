@@ -28,11 +28,6 @@ class Trade extends Component {
             <hr/>
 
             <h3>Useful links</h3>
-
-            <ul>
-              <li>Click <a href = 'https://github.com/korede97/Coursera_Capstone/blob/master/Coursera_Capstone.ipynb'> here</a> for the notebook </li>
-              <li>Click <a href = 'https://github.com/korede97/Coursera_Capstone/blob/master/coursera_capstone_report.pdf'> here</a>  for the report</li>
-            </ul>
       </div>
 
 

@@ -1,21 +1,21 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.93b11d24.chunk.css",
-    "main.js": "/portfolio/static/js/main.9ce663d6.chunk.js",
-    "main.js.map": "/portfolio/static/js/main.9ce663d6.chunk.js.map",
+    "main.js": "/portfolio/static/js/main.c04c8f19.chunk.js",
+    "main.js.map": "/portfolio/static/js/main.c04c8f19.chunk.js.map",
     "runtime-main.js": "/portfolio/static/js/runtime-main.209c2d7e.js",
     "runtime-main.js.map": "/portfolio/static/js/runtime-main.209c2d7e.js.map",
     "static/js/2.ab891278.chunk.js": "/portfolio/static/js/2.ab891278.chunk.js",
     "static/js/2.ab891278.chunk.js.map": "/portfolio/static/js/2.ab891278.chunk.js.map",
     "index.html": "/portfolio/index.html",
-    "precache-manifest.c73de267abb15a21c71f84b43671592b.js": "/portfolio/precache-manifest.c73de267abb15a21c71f84b43671592b.js",
+    "precache-manifest.daca3cdd4ac515915677c2ba3f1eb49b.js": "/portfolio/precache-manifest.daca3cdd4ac515915677c2ba3f1eb49b.js",
     "service-worker.js": "/portfolio/service-worker.js",
     "static/css/main.93b11d24.chunk.css.map": "/portfolio/static/css/main.93b11d24.chunk.css.map",
     "static/js/2.ab891278.chunk.js.LICENSE.txt": "/portfolio/static/js/2.ab891278.chunk.js.LICENSE.txt",
     "static/media/about.jpg": "/portfolio/static/media/about.2f52f879.jpg",
-    "static/media/about.mp3": "/portfolio/static/media/about.aa97fa39.mp3",
-    "static/media/about.wav": "/portfolio/static/media/about.dbfabc26.wav",
-    "static/media/about.ogg": "/portfolio/static/media/about.fcda6921.ogg",
+    "static/media/about.mp3": "/portfolio/static/media/about.6dd26188.mp3",
+    "static/media/about.ogg": "/portfolio/static/media/about.903c6827.ogg",
+    "static/media/about.wav": "/portfolio/static/media/about.941d518a.wav",
     "static/media/accident.jpg": "/portfolio/static/media/accident.ddf883b5.jpg",
     "static/media/business.jpg": "/portfolio/static/media/business.ad583bc7.jpg",
     "static/media/climate.jpg": "/portfolio/static/media/climate.92d90ed6.jpg",
@@ -31,6 +31,6 @@
     "static/js/runtime-main.209c2d7e.js",
     "static/js/2.ab891278.chunk.js",
     "static/css/main.93b11d24.chunk.css",
-    "static/js/main.9ce663d6.chunk.js"
+    "static/js/main.c04c8f19.chunk.js"
   ]
 }

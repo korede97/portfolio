@@ -1,4 +1,10 @@
 import React, {Component} from "react"
+import { TwitterTimelineEmbed } from 'react-twitter-embed';
+// import { TwitterTimelineEmbed, TwitterShareButton, TwitterFollowButton, TwitterHashtagButton, TwitterMentionButton, TwitterTweetEmbed, TwitterMomentShare, TwitterDMButton, TwitterVideoEmbed, TwitterOnAirButton } from 'react-twitter-embed';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+// import { faShareAlt } from "@fortawesome/free-solid-svg-icons";
+// import { faTwitter } from '@fortawesome/free-brands-svg-icons';
+// import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
 var image_style = { border: '1px solid #ddd',
  borderRadius: '4px',
@@ -10,7 +16,7 @@ class HealthyLiving extends Component {
   render(){
     return (
       <div className = 'container'>
-          <img src="healthy.jpg" alt="healthylifestyle" className="center"
+          <img src={require("../assets/healthy.jpg")} alt="healthylifestyle" className="center"
             style = {image_style}/>
             <hr/>
             <br />
@@ -21,12 +27,6 @@ class HealthyLiving extends Component {
 
             <h3>Notes</h3>
               <ul>
-                <li> Questions </li>
-                  <ul>
-                    <li> How often should I exercise ? </li>
-                    <li> Should I eat more protein?</li>
-                    <li> What is the most efficient way for me to maintain a healthy lifestyle</li>
-                  </ul>
                 <li>Data Collection </li>
                   <ul>
                     <li> Fitness log created by me </li>
@@ -39,11 +39,24 @@ class HealthyLiving extends Component {
                 <li>A database will be created to store the data and practice SQL queries of the data</li>
               </ul>
 
-            <h3>Blog section - Coming Soon</h3>
-            <hr/>
-
-            <h3>Useful links</h3>
-
+              <div id = 'twitter-border' className = 'center'>
+                <div className="centerContent">
+                  <div className="selfCenter standardWidth">
+                    <div id = 'container_1'>
+                        <TwitterTimelineEmbed
+                         sourceType="collection"
+                         id = '1316244646075478017'
+                         screenName="koredeadegboye"
+                         theme="dark"
+                         // borderColor="#40E0D0"
+                         noFooter
+                         noHeader
+                         options={{height: 800}}
+                        />
+                    </div>
+                  </div>
+                </div>
+              </div>
 
       </div>
 

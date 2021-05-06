@@ -146,15 +146,9 @@ class App extends Component {
         return (<div>
 
             <header>
-                <div>
-                    <h1 className="text-center">Nonperiodic flow</h1>
+                {/*<div>
                     <nav className="navbar custom navbar-expand-lg navbar-light  text-center">
                         <ul className="navbar-nav mr-auto mx-auto">
-                            {/*<li> <a href="/portfolio" class="pull-left"><img src={require("./assets/ct_2-removebg-preview.png")}          style = {{ border: '1px solid #ddd',
-                        width: '100px',
-                        height:'100px'
-                        }}/></a> </li>*/
-                            }
                             <li>
                                 <Link to={'/portfolio'} className="nav-link" style={{
                                         color: 'white',
@@ -183,18 +177,23 @@ class App extends Component {
                                         color: 'white'
                                     }}>Meet the Team</Link>
                             </li>
-                            {/* <li><Link to={'/filter'} className="nav-link">Filter</Link></li> */}
                         </ul>
                     </nav>
-                </div>
-            </header>
-
-            <body>
+                </div>*/}
                 <br/>
+                <br/>
+                <div className='row'>
+                <h1> NONPERIODIC FLOW </h1>
+                &nbsp;&nbsp;&nbsp;&nbsp;
                 <h2>
                     <b>{this.timeBlock()}</b>
                 </h2>
                 <br/>
+                </div>
+            </header>
+
+            <body>
+
                 <div className="InteractiveBar">
                     <div id='' className="InteractiveBar-bar">
                         <p id='typewriter'>{this.state.text}</p>
@@ -203,7 +202,7 @@ class App extends Component {
                     <div className="InteractiveBar-btnContainer">
                         <button className="InteractiveBar-btn" onClick={() => this.typing('statistics')}>Statistics</button>
                         <button className="InteractiveBar-btn" onClick={() => this.typing('networkedThought')}>Networked Thought</button>
-                        <button className="InteractiveBar-btn" onClick={() => this.typing('recipes')}>Recipes</button>
+                        <button className="InteractiveBar-btn" onClick={() => this.typing('recipes')}>Recipes?</button>
                     </div>
                 </div>
                 <br/>
@@ -281,4 +280,8 @@ class App extends Component {
 
 export default App;
 
-// export default withRouter(App);
+// // export default withRouter(App);
+// <li> <a href="/portfolio" class="pull-left"><img src={require("./assets/ct_2-removebg-preview.png")}          style = {{ border: '1px solid #ddd',
+// width: '100px',
+// height:'100px'
+// }}/></a> </li>

@@ -1,0 +1,46 @@
+#gridlayout {
+  padding: 40px;
+  background-color: white;
+  margin: 0px auto;
+  width: 70%;
+}
+
+.img-wrap{
+  height:20px;
+   /* adjust the padding to change the aspect ratio of the div */
+  padding-bottom:60%;
+}
+/* Container needed to position the overlay. Adjust the width as needed */
+#container_1 {
+  position: relative;
+  width:100%;
+  margin-top: 12px;
+  opacity: 1;
+}
+
+#container_1:hover {
+  /* opacity: 1; */
+  filter: brightness(70%);
+}
+
+.player-wrapper {
+  position: relative;
+  padding-top: 56.25%; /* Player ratio: 100 / (1280 / 720) */
+  /* height: 100px; */
+}
+
+.react-player {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+
+#twitter-border {
+  border: 3px solid #33b3a6;
+  border-top: 0px;
+  border-bottom: 0px;
+  /* border-radius: 20px; */
+  padding: 5px;
+  /* width: 70px; */
+}

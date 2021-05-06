@@ -1,7 +1,7 @@
 // App.js
 
-import React, { Component } from 'react';
-import { withRouter, Switch, Route, Link } from 'react-router-dom';
+import React, {Component} from 'react';
+import {withRouter, Switch, Route, Link} from 'react-router-dom';
 // import { SocialIcon } from 'react-social-icons';
 import Content from './components/Content';
 import About from './components/About';
@@ -18,57 +18,57 @@ import BookClub from './components/BookClub';
 // import Home_1 from './components/Home_1';
 import News from './components/News';
 import * as Scroll from 'react-scroll';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faTwitter } from '@fortawesome/free-brands-svg-icons'
-import { faGithub } from '@fortawesome/free-brands-svg-icons'
-import { faLinkedin } from '@fortawesome/free-brands-svg-icons'
-import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
-import { faMedium } from "@fortawesome/free-brands-svg-icons";
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+import {faTwitter} from '@fortawesome/free-brands-svg-icons'
+import {faGithub} from '@fortawesome/free-brands-svg-icons'
+import {faLinkedin} from '@fortawesome/free-brands-svg-icons'
+import {faEnvelope} from "@fortawesome/free-regular-svg-icons";
+import {faMedium} from "@fortawesome/free-brands-svg-icons";
 
-import { createBrowserHistory } from 'history';
+import {createBrowserHistory} from 'history';
 
 import Typewriter from "typewriter-effect";
 
 // import { animateScroll } from "react-scroll";
 import ReactGA from 'react-ga';
 
-import './App.css';
+import './css/App.css';
 
-var Link_1     = Scroll.Link;
-var Element   = Scroll.Element;
-// var Events    = Scroll.Events;
-// var scroll    = Scroll.animateScroll;
-// var scrollSpy = Scroll.scrollSpy;
-
+var Link_1 = Scroll.Link;
+var Element = Scroll.Element;
 
 // const history = createBrowserHistory();
 //
-// // Initialize google analytics page view tracking
+//  Initialize google analytics page view tracking
 // ReactGA.initialize("UA-180692644-1");
 // history.listen(location => {
-//   ReactGA.set({ page: location.pathname+location.search }); // Update the user's current page
-//   ReactGA.pageview(location.pathname+ location.search); // Record a pageview for the given page
+//   ReactGA.set({ page: location.pathname+location.search });  Update the user's current page
+//   ReactGA.pageview(location.pathname+ location.search);  Record a pageview for the given page
 //   console.log(location.pathname)
 // });
-
-
-
+const interactiveBarText = [
+    "Awesome, here's a preview! Be sure to check out <a href='#'> one of our sample reports</a>, or take the leap and <a href='#'>make decisions under uncertainity!</a>",
+    "Awesome, here's a preview! Note-taking by networked thoughts is a great way to study and review material. Check out the study here",
+    "Awesome, here's a preview! Be sure to check out <a href='#'> a local favorite</a>",
+]
 class App extends Component {
-//   componentDidMount(){
-//     ReactGA.set({page:window.location.pathname + window.location.search});
-//     ReactGA.pageview(window.location.pathname + window.location.search);
-//   }
-//   componentDidUpdate(){
-//     ReactGA.set({page:window.location.pathname + window.location.search});
-//
-//     ReactGA.pageview(window.location.pathname + window.location.search);
-//   }
-//
-//   const { match } = this.props // coming from React Router v4.
-//
-// console.log(match.path) // /topics/:topicId/:subId
-//
-// console.log(match.url) // /topics/react-router/url-parameters
+    //   componentDidMount(){
+    //     ReactGA.set({page:window.location.pathname + window.location.search});
+    //     ReactGA.pageview(window.location.pathname + window.location.search);
+    //   }
+    //   componentDidUpdate(){
+    //     ReactGA.set({page:window.location.pathname + window.location.search});
+    //
+    //     ReactGA.pageview(window.location.pathname + window.location.search);
+    //   }
+    //
+    //   const { match } = this.props  coming from React Router v4.
+    //
+    // console.log(match.path)  /topics/:topicId/:subId
+    //
+    // console.log(match.url)  /topics/react-router/url-parameters
+
+
     constructor() {
         super();
         var today = new Date();
@@ -78,233 +78,205 @@ class App extends Component {
         // }
         this.state = {
             currentTime: time,
-            text: 'Hey there! Do you want to ace your upcoming coding interviews?',
+            text: 'Hey there! Welcome to Nonperiod flow! What feature are you interested in today?',
             type: false,
+            text_1: interactiveBarText[0],
         }
-        this.type = false;
-        this.text = 'Hey there! Do you want to ace your upcoming coding interviews?';
 
         this.typeWriter = this.typeWriter.bind(this);
         this.typing = this.typing.bind(this);
     }
 
-    componentDidMount() {
-
-    }
-    componentWillUnmount() {
-    }
-    timeBlock () {
+    componentDidMount() {}
+    componentWillUnmount() {}
+    timeBlock() {
         let time = parseInt(this.state.currentTime);
         let parts_parts_of_day;
 
-        if ( time >= 0 && time <= 11) {
+        if (time >= 0 && time <= 11) {
             parts_parts_of_day = 'Good morning';
-        }
-        else if (time >= 12 && time <= 5) {
+        } else if (time >= 12 && time <= 5) {
             parts_parts_of_day = 'Good aftrnoon';
-        }
-        else {
+        } else {
             parts_parts_of_day = 'Good evening';
         }
         console.log(parts_parts_of_day);
 
         return parts_parts_of_day
     }
-    typing () {
-        this.setState (
-            { type: true }
-        );
+    typing(feature) {
+        let text;
+        if (feature == 'statistics') {
+            text = interactiveBarText[0]
+        } else if (feature == 'networkedThought') {
+            text = interactiveBarText[1]
+        } else {
+            text = interactiveBarText[2]
+        }
+        this.setState({
+            type: true,
+            text_1: text
+        });
     }
     typeWriter() {
 
-        //
-        // this.setState (
-        //     { type: true }
-        // );
-        if (this.state.type){
+        if (this.state.type) {
             var app = document.getElementById('typewriter');
-            if(app){
+            if (app) {
                 console.log(app);
                 let text = '';
                 app.innerHTML = text;
             }
-            return (
-                <Typewriter
-                onInit={(typewriter) => {
-                    typewriter.typeString('Hello World!')
+
+            return (<Typewriter onInit={(typewriter) => {
+                    typewriter
+                    .typeString(this.state.text_1)
                     .callFunction(() => {
                         console.log('String typed out!');
                     })
+                    .changeDelay(10)
                     .start()
-                }}
-                />
-            );
+                }}/>);
         }
         return;
-
     }
-    stop() {
-        this.setState (
-            { type: false }
-        );
-
-    }
-
 
     render() {
 
-        return (
-            <div>
+        return (<div>
 
             <header>
-
-              {/*}<br/>
-              <br/>
-
-              <center><h1 style = {{fontWeight: 'bold', fontSize: '55px', fontFamily:'Courier New', color:'#33b3a6'}} > Cosy Analytics</h1></center>
-              <br />
-              <center style  = {{color: '#b3a633', fontStyle:'italic'}}>"Data your way"</center>
-              <br/>
-              <br/>*/}
-              <span>
-              {/*<img src={require("./assets/header_text.png")} alt="teethwhitening" className="center"
-              style = {{
-                width: '60%',
-                height:'30%',
-                padding: '50px',
-            }}/>*/}
-            </span>
-            <div>
-            <h1 className="text-center">Nonperiodic flow</h1>
-            <nav className="navbar custom navbar-expand-lg navbar-light  text-center" >
-                <ul className="navbar-nav mr-auto mx-auto">
-                    {/*<li> <a href="/portfolio" class="pull-left"><img src={require("./assets/ct_2-removebg-preview.png")}          style = {{ border: '1px solid #ddd',
+                <div>
+                    <h1 className="text-center">Nonperiodic flow</h1>
+                    <nav className="navbar custom navbar-expand-lg navbar-light  text-center">
+                        <ul className="navbar-nav mr-auto mx-auto">
+                            {/*<li> <a href="/portfolio" class="pull-left"><img src={require("./assets/ct_2-removebg-preview.png")}          style = {{ border: '1px solid #ddd',
                         width: '100px',
                         height:'100px'
-                        }}/></a> </li>*/}
-                    <li><Link to={'/portfolio'} className="nav-link" style = {{color:'white', hover: 'green'}}> Home </Link></li>
-                    <li><a href={'https://medium.com/@korede.adegboye'} className="nav-link" style = {{color:'white', hover: 'green'}} target = '_blank' rel = 'noopener noreferrer'> Articles </a></li>
-                    <div id = 'to_pointer'>
-                    <li><Link_1 activeClass="active" to='footer' spy ={true} offset = {50} duration = {5000} delay = {1000} className="nav-link" style = {{color:'white'}}>Contact</Link_1></li>
+                        }}/></a> </li>*/
+                            }
+                            <li>
+                                <Link to={'/portfolio'} className="nav-link" style={{
+                                        color: 'white',
+                                        hover: 'green'
+                                    }}>
+                                    Home
+                                </Link>
+                            </li>
+                            <li>
+                                <a href={'https://medium.com/@korede.adegboye'} className="nav-link" style={{
+                                        color: 'white',
+                                        hover: 'green'
+                                    }} target='_blank' rel='noopener noreferrer'>
+                                    Articles
+                                </a>
+                            </li>
+                            <div id='to_pointer'>
+                                <li>
+                                    <Link_1 activeClass="active" to='footer' spy={true} offset={50} duration={5000} delay={1000} className="nav-link" style={{
+                                            color: 'white'
+                                        }}>Contact</Link_1>
+                                </li>
+                            </div>
+                            <li>
+                                <Link to={'/about'} className="nav-link" style={{
+                                        color: 'white'
+                                    }}>Meet the Team</Link>
+                            </li>
+                            {/* <li><Link to={'/filter'} className="nav-link">Filter</Link></li> */}
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+
+            <body>
+                <br/>
+                <h2>
+                    <b>{this.timeBlock()}</b>
+                </h2>
+                <br/>
+                <div className="InteractiveBar">
+                    <div id='' className="InteractiveBar-bar">
+                        <p id='typewriter'>{this.state.text}</p>
+                        {this.typeWriter()}
                     </div>
-                <li><Link to={'/about'} className="nav-link" style = {{color:'white'}}>Meet the Team</Link></li>
-                {/*<li><Link to={'/filter'} className="nav-link">Filter</Link></li>*/}
-                </ul>
-            </nav>
-        </div>
-      </header>
+                    <div className="InteractiveBar-btnContainer">
+                        <button className="InteractiveBar-btn" onClick={() => this.typing('statistics')}>Statistics</button>
+                        <button className="InteractiveBar-btn" onClick={() => this.typing('networkedThought')}>Networked Thought</button>
+                        <button className="InteractiveBar-btn" onClick={() => this.typing('recipes')}>Recipes</button>
+                    </div>
+                </div>
+                <br/>
 
-      <body>
-        <br/>
-        <h2><b>{this.timeBlock()}</b></h2>
-        <br/>
-          <div className="InteractiveBar" align="left">
-              <div id='' className="InteractiveBar-bar center">
-              <p id='typewriter'>{this.state.text}</p>
-              {this.typeWriter()}
-              </div>
-              <div className="InteractiveBar-btnContainer">
-                <button className="InteractiveBar-btn" onClick={this.typing}>Statistics</button>
-                <button className="InteractiveBar-btn" onClick={this.typeWriter.bind(this)}>Networked Thought</button>
-                <button className="InteractiveBar-btn">Recipes</button>
-              </div>
-          </div>
-          <br/>
+                <Route exact="exact" path='/' component={Content}/>
 
-          <Route exact path='/' component={Content} />
+                <Switch>
+                    <Route exact="exact" path='/portfolio' component={Content}/>
+                    <Route path='/about' component={About}/>
+                    <Route path='/portfolio/shinyclimate' component={ShinyClimate}/>
+                    <Route path='/portfolio/caraccident' component={CarAccident}/>
+                    <Route path='/portfolio/resources' component={Resources}/>
+                    <Route path='/portfolio/healthylifestyle' component={HealthyLiving}/>
+                    <Route path='/portfolio/teethwhitening' component={TeethWhitening}/>
+                    <Route path='/portfolio/trade' component={Trade}/>
+                    <Route path='/portfolio/news' component={News}/>
+                    <Route path='/surveys' component={Surveys}/>
+                    <Route path='/bookclub' component={BookClub}/>
+                </Switch>
 
-            <Switch>
-                <Route exact path='/portfolio' component={Content} />
-                <Route path='/about' component={About} />
-                <Route path='/portfolio/shinyclimate'  component={ShinyClimate} />
-                <Route path='/portfolio/caraccident' component={CarAccident} />
-                <Route path='/portfolio/resources' component={Resources} />
-                <Route path='/portfolio/healthylifestyle' component={HealthyLiving} />
-                <Route path='/portfolio/teethwhitening' component={TeethWhitening} />
-                <Route path='/portfolio/trade' component={Trade} />
-                <Route path='/portfolio/news' component={News} />
-                <Route path='/surveys' component={Surveys} />
-                <Route path='/bookclub' component={BookClub} />
-            </Switch>
+            </body>
+            <footer>
+                <Element name='footer'>
+                    <p style={{
+                            fontSize: '40px'
+                        }}>Contact us</p>
 
-      </body>
-      <footer>
-        <Element name = 'footer'>
-        <p style={{fontSize: '40px'}}>Contact us</p>
+                    <div className='center'>
+                        <div id='footer_links'>
+                            <div className='bounce'>
+                                <a href="https://www.linkedin.com/in/koredeadegboye/" target='_blank' rel="noopener noreferrer">
+                                    <FontAwesomeIcon icon={faLinkedin} size='3x' color="#343434" className='footer_link'/>
+                                </a>
+                            </div>
+                        </div>
 
-          <div className = 'center'>
-          <div id = 'footer_links'>
-            <div className = 'bounce'>
-              <a href = "https://www.linkedin.com/in/koredeadegboye/" target ='_blank' rel="noopener noreferrer">
-                <FontAwesomeIcon
-                  icon={faLinkedin}
-                  size = '3x'
-                  color="#343434"
-                  className = 'footer_link'
-                />
-              </a>
-            </div>
-            </div>
+                        <div id='footer_links'>
+                            <div className='bounce'>
+                                <a href="mailto:korede_a3@outlook.com" target='_blank' rel="noopener noreferrer">
+                                    <FontAwesomeIcon icon={faEnvelope} size='3x' color="#343434" className='footer_link'/>
+                                </a>
+                            </div>
+                        </div>
 
+                        <div id='footer_links'>
+                            <div className='bounce'>
+                                <a href="mailto:korede_a3@outlook.com" target='_blank' rel="noopener noreferrer">
+                                    <FontAwesomeIcon icon={faTwitter} size='3x' color="#343434" className='footer_link'/>
+                                </a>
+                            </div>
+                        </div>
 
-            <div id = 'footer_links'>
-              <div className = 'bounce'>
-                <a href = "mailto:korede_a3@outlook.com" target ='_blank' rel="noopener noreferrer">
-                  <FontAwesomeIcon
-                    icon={faEnvelope}
-                    size = '3x'
-                    color="#343434"
-                    className = 'footer_link'
-                  />
-                </a>
-              </div>
-            </div>
+                        <div id='footer_links'>
+                            <div className='bounce'>
+                                <a href="https://github.com/korede97" target='_blank' rel="noopener noreferrer">
+                                    <FontAwesomeIcon icon={faGithub} size='3x' color="#343434" className='footer_link'/>
+                                </a>
+                            </div>
+                        </div>
+                        <div id='footer_links'>
+                            <a href="https://github.com/korede97" target='_blank' rel="noopener noreferrer">
+                                <FontAwesomeIcon icon={faMedium} size='3x' color="#343434" className='footer_link'/>
+                            </a>
+                        </div>
 
-            <div id = 'footer_links'>
-              <div className = 'bounce'>
-                <a href = "mailto:korede_a3@outlook.com" target ='_blank' rel="noopener noreferrer">
-                  <FontAwesomeIcon
-                    icon={faTwitter}
-                    size = '3x'
-                    color="#343434"
-                    className = 'footer_link'
-                  />
-                </a>
-              </div>
-            </div>
+                    </div>
+                    <br/>
+                    © 2021 Korede Adegboye. All rights reserved.
+                </Element>
+            </footer>
 
-            <div id = 'footer_links'>
-              <div className = 'bounce'>
-                <a href = "https://github.com/korede97" target ='_blank' rel="noopener noreferrer">
-                  <FontAwesomeIcon
-                    icon={faGithub}
-                    size = '3x'
-                    color="#343434"
-                    className = 'footer_link'
-                  />
-                </a>
-              </div>
-            </div>
-            <div id = 'footer_links'>
-                <a href = "https://github.com/korede97" target ='_blank' rel="noopener noreferrer">
-                  <FontAwesomeIcon
-                    icon={faMedium}
-                    size = '3x'
-                    color="#343434"
-                    className = 'footer_link'
-                  />
-                </a>
-            </div>
-
-          </div>
-          <br/>
-          © 2021 Korede Adegboye. All rights reserved.
-        </Element>
-      </footer>
-
-      </div>
-    );
-  }
+        </div>);
+    }
 }
 
 export default App;

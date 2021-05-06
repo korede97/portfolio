@@ -5,15 +5,14 @@
 
 header {
   color: white;
+  background-color: black;
 }
 body {
   margin: 0;
   font-family: Arial;
   font-size: 20px;
-  /* color: #dcdcc6; */
-  /* color: white; */
-  background-color: white;
-  /* #add8e6 */
+  background-color: rgb(253,253,246);
+
 }
 
 .nav-link:hover{
@@ -82,7 +81,34 @@ footer {
   height: auto;
 }
 
+.InteractiveBar-bar {
+    /* color: rgb(255, 247, 204);  */
+    /* height: 70px;
+    line-height: 50px; */
+    width: 700px;
+    border: 1px outset rgb(251, 251, 251);
+    border-radius: 5px;
+    box-shadow: 0px 1px #888888;
+    background-color: white;
+    /* text-align: center; */
+    padding: 20px;
+    margin: 20px;
+}
 
+.InteractiveBar {
+
+}
+
+.InteractiveBar-btn {
+    /* width: 700px; */
+    border: 1px outset rgb(251, 251, 251);
+    border-radius: 5px;
+    box-shadow: 0px 1px #888888;
+    background-color: white;
+    /* text-align: center; */
+    padding: 20px;
+    margin: 20px;
+}
 
 #gridlayout {
   padding: 40px;

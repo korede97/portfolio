@@ -27,6 +27,7 @@ import { faMedium } from "@fortawesome/free-brands-svg-icons";
 
 import { createBrowserHistory } from 'history';
 
+import Typewriter from "typewriter-effect";
 
 // import { animateScroll } from "react-scroll";
 import ReactGA from 'react-ga';
@@ -77,8 +78,20 @@ class App extends Component {
         // }
         this.state = {
             currentTime: time,
+            text: 'Hey there! Do you want to ace your upcoming coding interviews?',
+            type: false,
         }
+        this.type = false;
+        this.text = 'Hey there! Do you want to ace your upcoming coding interviews?';
 
+        this.typeWriter = this.typeWriter.bind(this);
+        this.typing = this.typing.bind(this);
+    }
+
+    componentDidMount() {
+
+    }
+    componentWillUnmount() {
     }
     timeBlock () {
         let time = parseInt(this.state.currentTime);
@@ -97,56 +110,106 @@ class App extends Component {
 
         return parts_parts_of_day
     }
-  render() {
+    typing () {
+        this.setState (
+            { type: true }
+        );
+    }
+    typeWriter() {
 
-    return (
-      <div>
+        //
+        // this.setState (
+        //     { type: true }
+        // );
+        if (this.state.type){
+            var app = document.getElementById('typewriter');
+            if(app){
+                console.log(app);
+                let text = '';
+                app.innerHTML = text;
+            }
+            return (
+                <Typewriter
+                onInit={(typewriter) => {
+                    typewriter.typeString('Hello World!')
+                    .callFunction(() => {
+                        console.log('String typed out!');
+                    })
+                    .start()
+                }}
+                />
+            );
+        }
+        return;
 
-      <header>
+    }
+    stop() {
+        this.setState (
+            { type: false }
+        );
 
-      {/*}<br/>
-      <br/>
+    }
 
-      <center><h1 style = {{fontWeight: 'bold', fontSize: '55px', fontFamily:'Courier New', color:'#33b3a6'}} > Cosy Analytics</h1></center>
-      <br />
-      <center style  = {{color: '#b3a633', fontStyle:'italic'}}>"Data your way"</center>
-      <br/>
-      <br/>*/}
-      <span>
-      <img src={require("./assets/header_text.png")} alt="teethwhitening" className="center"
-      style = {{
-        width: '60%',
-        height:'30%',
-        padding: '50px',
-      }}/>
-      </span>
-        <div>
 
-          <nav className="navbar custom navbar-expand-lg navbar-light  text-center" >
-          <ul className="navbar-nav mr-auto mx-auto">
-            <li> <a href="#" class="pull-left"><img src={require("./assets/ct_2-removebg-preview.png")}          style = {{ border: '1px solid #ddd',
+    render() {
+
+        return (
+            <div>
+
+            <header>
+
+              {/*}<br/>
+              <br/>
+
+              <center><h1 style = {{fontWeight: 'bold', fontSize: '55px', fontFamily:'Courier New', color:'#33b3a6'}} > Cosy Analytics</h1></center>
+              <br />
+              <center style  = {{color: '#b3a633', fontStyle:'italic'}}>"Data your way"</center>
+              <br/>
+              <br/>*/}
+              <span>
+              {/*<img src={require("./assets/header_text.png")} alt="teethwhitening" className="center"
+              style = {{
+                width: '60%',
+                height:'30%',
+                padding: '50px',
+            }}/>*/}
+            </span>
+            <div>
+            <h1 className="text-center">Nonperiodic flow</h1>
+            <nav className="navbar custom navbar-expand-lg navbar-light  text-center" >
+                <ul className="navbar-nav mr-auto mx-auto">
+                    {/*<li> <a href="/portfolio" class="pull-left"><img src={require("./assets/ct_2-removebg-preview.png")}          style = {{ border: '1px solid #ddd',
                         width: '100px',
                         height:'100px'
-                      }}/></a> </li>
-            <li><Link to={'/portfolio'} className="nav-link" style = {{color:'white', hover: 'green'}}> Home </Link></li>
-            <li><a href={'https://medium.com/@korede.adegboye'} className="nav-link" style = {{color:'white', hover: 'green'}} target = '_blank' rel = 'noopener noreferrer'> Articles </a></li>
-            <li><Link to={'/surveys'} className="nav-link" style = {{color:'white'}}>Surveys</Link></li>
-            <li><Link to={'/bookclub'} className="nav-link" style = {{color:'white'}}>Book Club</Link></li>
-            <div id = 'to_pointer'>
-              <li><Link_1 activeClass="active" to='footer' spy ={true} offset = {50} duration = {5000} delay = {1000} className="nav-link" style = {{color:'white'}}>Contact</Link_1></li>
-            </div>
-            <li><Link to={'/about'} className="nav-link" style = {{color:'white'}}>About</Link></li>
-            {/*<li><Link to={'/filter'} className="nav-link">Filter</Link></li>*/}
-          </ul>
-          </nav>
+                        }}/></a> </li>*/}
+                    <li><Link to={'/portfolio'} className="nav-link" style = {{color:'white', hover: 'green'}}> Home </Link></li>
+                    <li><a href={'https://medium.com/@korede.adegboye'} className="nav-link" style = {{color:'white', hover: 'green'}} target = '_blank' rel = 'noopener noreferrer'> Articles </a></li>
+                    <div id = 'to_pointer'>
+                    <li><Link_1 activeClass="active" to='footer' spy ={true} offset = {50} duration = {5000} delay = {1000} className="nav-link" style = {{color:'white'}}>Contact</Link_1></li>
+                    </div>
+                <li><Link to={'/about'} className="nav-link" style = {{color:'white'}}>Meet the Team</Link></li>
+                {/*<li><Link to={'/filter'} className="nav-link">Filter</Link></li>*/}
+                </ul>
+            </nav>
         </div>
       </header>
 
       <body>
+        <br/>
         <h2><b>{this.timeBlock()}</b></h2>
-      <br/>
-      remove home link in navbar and replace with logo..
-          <br />
+        <br/>
+          <div className="InteractiveBar" align="left">
+              <div id='' className="InteractiveBar-bar center">
+              <p id='typewriter'>{this.state.text}</p>
+              {this.typeWriter()}
+              </div>
+              <div className="InteractiveBar-btnContainer">
+                <button className="InteractiveBar-btn" onClick={this.typing}>Statistics</button>
+                <button className="InteractiveBar-btn" onClick={this.typeWriter.bind(this)}>Networked Thought</button>
+                <button className="InteractiveBar-btn">Recipes</button>
+              </div>
+          </div>
+          <br/>
 
           <Route exact path='/' component={Content} />
 

@@ -80,6 +80,8 @@ class App extends Component {
             currentTime: time,
             text: 'Hey there! Welcome to Nonperiod flow! What feature are you interested in today?',
             type: false,
+            type_1: false,
+            type_2: false,
             text_1: interactiveBarText[0],
         }
 
@@ -106,21 +108,74 @@ class App extends Component {
     }
     typing(feature) {
         let text;
+        let type = false;
+        let type_1 = false;
+        let type_2 = false;
         if (feature == 'statistics') {
             text = interactiveBarText[0]
+            type = true;
         } else if (feature == 'networkedThought') {
             text = interactiveBarText[1]
+            type_1 = true;
         } else {
             text = interactiveBarText[2]
+            type_2 = true;
         }
         this.setState({
-            type: true,
+            type: type,
+            type_1: type_1,
+            type_2: type_2,
             text_1: text
         });
     }
     typeWriter() {
 
         if (this.state.type) {
+            var app = document.getElementById('typewriter');
+            if (app) {
+                console.log(app);
+                let text = '';
+                app.innerHTML = text;
+            }
+
+            return (<Typewriter onInit={(typewriter) => {
+                    typewriter
+                    .typeString(this.state.text_1)
+                    .callFunction(() => {
+                        console.log('String typed out!');
+                    })
+                    .changeDelay(10)
+                    .start()
+                }}/>);
+        }
+        return;
+    }
+    typeWriter_1() {
+
+        if (this.state.type_1) {
+            var app = document.getElementById('typewriter');
+            if (app) {
+                console.log(app);
+                let text = '';
+                app.innerHTML = text;
+            }
+
+            return (<Typewriter onInit={(typewriter) => {
+                    typewriter
+                    .typeString(this.state.text_1)
+                    .callFunction(() => {
+                        console.log('String typed out!');
+                    })
+                    .changeDelay(10)
+                    .start()
+                }}/>);
+        }
+        return;
+    }
+
+    typeWriter_2() {
+
+        if (this.state.type_2) {
             var app = document.getElementById('typewriter');
             if (app) {
                 console.log(app);
@@ -196,8 +251,10 @@ class App extends Component {
 
                 <div className="InteractiveBar">
                     <div id='' className="InteractiveBar-bar">
-                        <p id='typewriter'>{this.state.text}</p>
-                        {this.typeWriter()}
+                        <div id='typewriter'>{this.state.text}</div>
+                        <div id='typewriter'>{this.typeWriter()}</div>
+                        <div id='typewriter'>{this.typeWriter_1()}</div>
+                        <div id='typewriter'>{this.typeWriter_2()}</div>
                     </div>
                     <div className="InteractiveBar-btnContainer">
                         <button className="InteractiveBar-btn" onClick={() => this.typing('statistics')}>Statistics</button>

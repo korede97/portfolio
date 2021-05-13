@@ -78,7 +78,7 @@ class App extends Component {
         // }
         this.state = {
             currentTime: time,
-            text: 'Hey there! Welcome to Nonperiod flow! What feature are you interested in today?',
+            text: 'Hey there! Welcome to Nonperiodic flow! What feature are you interested in today?',
             type: false,
             type_1: false,
             type_2: false,
@@ -86,7 +86,11 @@ class App extends Component {
         }
 
         this.typeWriter = this.typeWriter.bind(this);
+        this.typeWriter_1 = this.typeWriter.bind(this);
+        this.typeWriter_2 = this.typeWriter.bind(this);
         this.typing = this.typing.bind(this);
+        this.timeBlock = this.timeBlock.bind(this);
+
     }
 
     componentDidMount() {}
@@ -94,15 +98,16 @@ class App extends Component {
     timeBlock() {
         let time = parseInt(this.state.currentTime);
         let parts_parts_of_day;
+        // console.log(time)
 
         if (time >= 0 && time <= 11) {
             parts_parts_of_day = 'Good morning';
-        } else if (time >= 12 && time <= 5) {
-            parts_parts_of_day = 'Good aftrnoon';
+        } else if (time >= 12 && time <= 18) {
+            parts_parts_of_day = 'Good afternoon';
         } else {
             parts_parts_of_day = 'Good evening';
         }
-        console.log(parts_parts_of_day);
+        // console.log(parts_parts_of_day);
 
         return parts_parts_of_day
     }

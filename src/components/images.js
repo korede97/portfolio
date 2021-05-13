@@ -3,7 +3,7 @@ const portfolio = [
     name: "Welcome!",
     headline: 'Cozy Analytics in 60 seconds',
     category: ["all", "personal"],
-    src: "https://www.youtube.com/watch?v=qi5K4D3bHVM",
+    src: require("../assets/intro_may13.mp4"),
     // link: "/portfolio/shinyclimate",
     column: 3
   },
@@ -98,13 +98,6 @@ const portfolio = [
   //   category: ["all", "personal"],
   //   column: 1
   // },
-  {
-    name: "Book Club",
-    category: ["all", "community"],
-    src: require("../assets/bookClub_03_2021.jpg"),
-    // href: '',
-    column: 3
-  },
   {
     name: "Buying your first home in Ontario",
     headline: '[insert headline]',

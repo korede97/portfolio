@@ -117,37 +117,36 @@ function Content() {
                             {item.headline}
                         </p>
                     </div>
-                    : item.filtered === true && item.name === 'intro'
-                        ? <div className='column'>
-                            <div id="container_1">
-                                <div id='player-wrapper'>
-                                    <ReactPlayer url={item.src} controls='true' width='100%' height='300px'/>
-                                    <p>
-                                        {item.name}
-                                    </p>
-                                </div>
-                                <p style={{
-                                        fontSize: '14px'
-                                    }}>
-                                    {item.headline}
-                                </p>
-                            </div>
-                        </div>
-                        : item.filtered === true && item.name === 'Book Club'
+                    // {/*: item.filtered === true && item.name === 'intro'
+                    //     ? <div className='column'>
+                    //         <div id="container_1">
+                    //             <div id='player-wrapper'>
+                    //                 <ReactPlayer url={item.src} controls='true' width='100%' height='300px'/>
+                    //                 <p>
+                    //                     {item.name}
+                    //                 </p>
+                    //             </div>
+                    //             <p style={{
+                    //                     fontSize: '14px'
+                    //                 }}>
+                    //                 {item.headline}
+                    //             </p>
+                    //         </div>
+                    //     </div>*/}
+                        : item.filtered === true && item.name === 'Welcome!'
                             ? <div className='column'>
-                                <div id='container_1'>
-                                    <center>
-                                        <div id='current_book' style={{
-                                                border: '5px solid #33b3a6',
-                                                height: '350px'
-                                            }}>
-                                            <img key={item.name} src={item.src} style={{
-                                                    width: '175px'
-                                                }}/>
-                                            <h4>Our March Book Club Reading - Join us!</h4>
-                                        </div>
-                                    </center>
-
+                                <div id="container_1">
+                                    <div id='player-wrapper'>
+                                        <iframe src={item.src} controls='true' width='100%' height='300px'></iframe>
+                                        <p>
+                                            {item.name}
+                                        </p>
+                                    </div>
+                                    <p style={{
+                                            fontSize: '14px'
+                                        }}>
+                                        {item.headline}
+                                    </p>
                                 </div>
                             </div>
                             : item.filtered === true && item.name === 'goodreads'
